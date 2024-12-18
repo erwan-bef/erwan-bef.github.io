@@ -1,0 +1,185 @@
+/* Style global de la page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* Aligne tout le contenu en haut de la page */
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Barre de navigation */
+nav {
+    background-color: #333;
+    /* Couleur de fond de la barre de navigation */
+    color: white;
+    padding: 10px 0;
+    /* Espacement intérieur de la barre de navigation */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Ombre légère pour la séparation */
+    z-index: 1;
+    /* S'assurer que la barre de navigation est au-dessus des autres éléments */
+    width: 100%;
+}
+
+/* Liste de liens de la barre de navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    /* Centrer les éléments */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+    /* Changer la couleur au survol */
+}
+
+/* En-tête */
+header {
+    background-color: #4CAF50;
+    /* Couleur de fond du header */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    /* Espacement intérieur du header */
+    width: 100%;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Section Projets */
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    width: 100%;
+    margin-top: 40px;
+    /* Espacement entre le header et la section projets */
+}
+
+/* Liste des projets */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Centrer les projets horizontalement */
+    gap: 20px;
+    width: 100%;
+}
+
+/* Style pour chaque carte de projet */
+.project {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project h3 {
+    margin-top: 10px;
+    font-size: 1.3em;
+}
+
+.project p {
+    color: #555;
+    margin-top: 10px;
+}
+
+.download-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #45a049;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+/* Media queries pour la responsivité */
+@media (max-width: 768px) {
+
+    /* Réduire la taille des textes et ajuster les projets pour les petits écrans */
+    body {
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .project {
+        width: 90%;
+        /* Réduire la largeur des cartes pour les petits écrans */
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Pour les écrans très petits */
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .project {
+        width: 100%;
+        /* Les projets prennent toute la largeur sur les petits écrans */
+    }
+}
